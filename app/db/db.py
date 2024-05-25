@@ -10,7 +10,7 @@ load_dotenv()
 db_client: AsyncIOMotorClient = None
 
 
-async def get_db() -> AsyncIOMotorClient:
+async def get_db() -> AsyncIOMotorDatabase:
     db_name = Config.app_settings.get('db_name')
     return db_client[db_name]
 
